@@ -3,11 +3,11 @@ services:
   neko:
     image: m1k1o/neko:firefox
     environment:
-      NEKO_ADMIN: "admin"          # 管理员账户用户名
-      NEKO_PASSWORD: "password"    # 房间访问密码（所有人都需输入）
-      NEKO_SCREEN: "1920x1080@30"  # 分辨率及帧率，可根据需求调整
-      NEKO_BIND: "0.0.0.0"
-      NEKO_PORT: "8080"
+      NEKO_ADMIN: admin
+      NEKO_PASSWORD: password
+      NEKO_SCREEN: 1920x1080@30
+      NEKO_BIND: 0.0.0.0
+      NEKO_PORT: 8080
     ports:
-      - "9100:8080"
-    shm_size: '2gb'  # 为了处理大型页面或视频，增大共享内存，防止浏览器崩溃
+      - 9100:8080
+    shm_size: 2gb
